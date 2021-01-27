@@ -1,10 +1,13 @@
 import React from 'react';
 
+import DiceElement from "../components/Dice/DiceElement";
+
 const Dice = prop => {
 
   return (
     <React.Fragment>
-      single dice container
+      <DiceElement thrownNumber={1}/>
+      
     </React.Fragment>
   )
 }

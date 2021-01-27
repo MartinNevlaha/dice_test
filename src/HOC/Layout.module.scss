@@ -8,5 +8,6 @@
   flex-direction: column;
   main {
     flex: 1;
+    font-size: get-font-size(small);
   }
 }

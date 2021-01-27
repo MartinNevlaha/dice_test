@@ -1,19 +1,19 @@
 $colors: (
   primary: black,
-  secondary: #007DD9,
-  tertiary: #E8E9EF,
+  secondary: #007dd9,
+  tertiary: #e8e9ef,
 );
 
 @function get-color($color) {
-  @return map-get($colors, $color )
+  @return map-get($colors, $color);
 }
 
 $font-sizes: (
-  small: calc(.5rem + .6vw),
-  medium: calc(.8rem + .8vw),
-  large: calc(.1rem + .1vw)
+  small: calc(0.5rem + 0.6vw),
+  medium: calc(0.8rem + 0.8vw),
+  large: calc(0.1rem + 0.1vw),
 );
 
 @function get-font-size($size) {
-  @return map-get($font-size, $size )
+  @return map-get($font-sizes, $size);
 }

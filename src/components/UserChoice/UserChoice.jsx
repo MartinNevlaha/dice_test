@@ -6,7 +6,7 @@ import classes from "./UserChoice.module.scss";
 const UserChoice = (props) => {
   return <div className={classes.dice}>
     <FontAwesomeIcon icon={faDiceD6} size="10x" color="white" />
-    <h1>Please choose your game in navbar options!</h1>
+    <h1>Please choose your game option in navbar!</h1>
   </div>;
 };
 

@@ -5,8 +5,11 @@
   height: 100%;
   @include flexbox(center, center);
   flex-direction: column;
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
   h1 {
     margin: 5rem;
     color: white;
+    font-size: get-font-size(medium);
   }
 }

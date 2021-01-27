@@ -5,6 +5,7 @@
   height: 4rem;
   background-color: get-color(primary);
   color: white;
+  font-size: get-font-size(small);
   @include flexbox(space-between, center);
 
   &_logo {
