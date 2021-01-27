@@ -8,11 +8,32 @@
   @include flexbox(space-between, center);
 
   &_logo {
+    width: 50%;
     margin: 1rem;
-    @include flexbox(center, center);
+    @include flexbox(flex-start, center);
     h2 {
       margin: 2rem;
       text-transform: uppercase;
+    }
+  }
+
+  &_links {
+    @include flexbox(space-evenly, center);
+    width: 50%;
+    li {
+      width: 10rem;
+      height: 3rem;
+      padding: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      @include flexbox(center, center);
+      transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      &:hover, &:active {
+        border: 1px solid white;
+        border-radius: 8px;
+        cursor: pointer;
+      }
     }
   }
 }
