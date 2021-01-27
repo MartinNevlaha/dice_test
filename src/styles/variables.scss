@@ -7,3 +7,13 @@ $colors: (
 @function get-color($color) {
   @return map-get($colors, $color )
 }
+
+$font-sizes: (
+  small: calc(.5rem + .6vw),
+  medium: calc(.8rem + .8vw),
+  large: calc(.1rem + .1vw)
+);
+
+@function get-font-size($size) {
+  @return map-get($font-size, $size )
+}
