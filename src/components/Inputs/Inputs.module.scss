@@ -1,0 +1,14 @@
+@import "../../styles/imports.scss";
+
+.inputs {
+  margin: 2rem;
+  @include flexbox(center, center);
+  flex-wrap: wrap;
+  input {
+    width: 10rem;
+    height: 4rem;
+    margin: 2rem;
+    border-radius: 8px;
+  }
+
+}
