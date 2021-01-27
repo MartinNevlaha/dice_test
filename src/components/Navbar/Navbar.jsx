@@ -13,9 +13,10 @@ const UserChoice = (props) => {
         <h2>Dice</h2>
       </div>
       <ul className={classes.navbar_links}>
-        <li>Single dice</li>
-        <li>Custom dice</li>
-        <li>Multiple dice</li>
+        <li><NavLink to="/single-dice">Single dice</NavLink>
+        </li>
+        <li><NavLink to="/custom-dice">Custom dice</NavLink></li>
+        <li><NavLink to="/multiple-dice">Multiple dice</NavLink></li>
       </ul>
     </nav>
   );
