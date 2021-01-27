@@ -11,6 +11,7 @@
   @include flexbox(center, center);
   font-size: get-font-size(small);
   transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  margin: 0 2rem ;
   
   &_icon {
     padding-right: .5rem;

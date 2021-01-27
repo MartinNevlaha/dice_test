@@ -9,7 +9,7 @@
   @include flexbox(space-between, center);
 
   &_logo {
-    width: 50%;
+    width: 40%;
     margin: 1rem;
     @include flexbox(flex-start, center);
     h2 {
@@ -20,24 +20,26 @@
 
   &_links {
     @include flexbox(space-evenly, center);
-    width: 50%;
+    width: 60%;
     li {
-      width: 10rem;
+      width: 15rem;
       height: 3rem;
       padding: 5px;
       margin-left: 10px;
       margin-right: 10px;
       @include flexbox(center, center);
-      transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      
       a {
         text-decoration: none;
         color: white;
-      }
+        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-      &:hover, &:active {
-        border: 1px solid white;
-        border-radius: 8px;
-        cursor: pointer;
+        &:hover, &:active {
+          border: 1px solid white;
+          border-radius: 8px;
+          cursor: pointer;
+          padding: 0.5rem 0.3rem;
+        }
       }
     }
   }

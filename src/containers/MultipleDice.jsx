@@ -34,7 +34,7 @@ const MultipleDice = (props) => {
 
   return (
     <React.Fragment>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
         {numbers.dices.map((dice) => (
           <DiceElement thrownNumber={dice.value} key={dice.id} />
         ))}
