@@ -3,9 +3,9 @@ import React from 'react';
 const Dice = prop => {
 
   return (
-    <div>
+    <React.Fragment>
       single dice container
-    </div>
+    </React.Fragment>
   )
 }
 

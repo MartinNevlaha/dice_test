@@ -1,14 +1,15 @@
 import React, { Suspense } from "react";
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
-import { PulseSpinner } from "react-spinners-kit";
 
 import "./App.scss";
 import Layout from "./HOC/Layout";
+import Spinner from "./components/UI/Spinner/Spinner";
 
 //lazy loading componetns
 const SingleDice = React.lazy(() => import("./containers/SignleDice"));
 const CustomDice = React.lazy(() => import("./containers/CustomDice"));
 const MultipleDice = React.lazy(() => import("./containers/MultipleDice"));
+const UserChoice = React.lazy(() => import("./components/UserChoice/UserChoice"));
 
 function App(props) {
   return (
@@ -20,7 +21,7 @@ function App(props) {
             render={() => (
               <Suspense
                 fallback={
-                  <PulseSpinner color="white" size={30} loading={true} />
+                  <Spinner />
                 }
               >
                 <SingleDice />
@@ -32,7 +33,7 @@ function App(props) {
             render={() => (
               <Suspense
                 fallback={
-                  <PulseSpinner color="white" size={30} loading={true} />
+                  <Spinner />
                 }
               >
                 <CustomDice />
@@ -44,7 +45,7 @@ function App(props) {
             render={() => (
               <Suspense
                 fallback={
-                  <PulseSpinner color="white" size={30} loading={true} />
+                  <Spinner/>
                 }
               >
                 <MultipleDice />
@@ -56,10 +57,10 @@ function App(props) {
             render={() => (
               <Suspense
                 fallback={
-                  <PulseSpinner color="white" size={30} loading={true} />
+                  <Spinner />
                 }
               >
-                <SingleDice />
+                <UserChoice />
               </Suspense>
             )}
           />
