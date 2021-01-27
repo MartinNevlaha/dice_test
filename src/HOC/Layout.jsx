@@ -1,11 +1,10 @@
-import classes from "*.module.css";
 import React from "react";
 
-import "./Layout.module.scss";
+import classes from "./Layout.module.scss";
 
 const Layout = (props) => {
   return (
-    <div className={classes.layout}>
+    <div className={classes.Layout}>
       <main>{props.chidren}</main>
     </div>
   );
