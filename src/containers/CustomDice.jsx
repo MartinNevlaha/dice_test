@@ -6,7 +6,6 @@ import Inputs from "../components/Inputs/Inputs";
 import { generateNumber } from "../utils/utility";
 
 const CustomDice = (props) => {
-  const [number, setNumber] = useState(null);
   const initialState = {
     input1: "",
     input2: "",
@@ -15,19 +14,20 @@ const CustomDice = (props) => {
     input5: "",
     input6: "",
   };
-
   const [inputs, setInputs] = useState(initialState);
+  const [textResults, setTextResults] = useState("");
+
   const rollDiceHandler = () => {
-    setNumber(generateNumber());
+    setTextResults(Object.values(inputs)[generateNumber() - 1]);
   };
 
   const inputHandler = (e, key) => {
-    setInputs({...inputs, [key]: e.target.value})
+    setInputs({ ...inputs, [key]: e.target.value });
   };
 
   return (
     <div>
-      <DiceElement />
+      <DiceElement type="custom" customText={textResults} />
       <div
         style={{
           margin: "0 auto",

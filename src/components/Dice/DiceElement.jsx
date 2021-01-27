@@ -10,32 +10,35 @@ import dice_six from "../../assets/img/dice-6.png";
 import dice_blank from "../../assets/img/dice-blank.png";
 
 const DiceElement = (props) => {
-  let number;
-  switch (props.thrownNumber) {
-    case 1:
-      number = dice_one;
-      break;
-    case 2:
-      number = dice_two;
-      break;
-    case 3:
-      number = dice_three;
-      break;
-    case 4:
-      number = dice_four;
-      break;
-    case 5:
-      number = dice_five;
-      break;
-    case 6:
-      number = dice_six;
-      break;
-    default:
-      number = dice_blank;
+  let number = dice_blank;
+  if (props.type !== "custom") {
+    switch (props.thrownNumber) {
+      case 1:
+        number = dice_one;
+        break;
+      case 2:
+        number = dice_two;
+        break;
+      case 3:
+        number = dice_three;
+        break;
+      case 4:
+        number = dice_four;
+        break;
+      case 5:
+        number = dice_five;
+        break;
+      case 6:
+        number = dice_six;
+        break;
+      default:
+        number = dice_blank;
+    }
   }
 
   return (
     <div className={classes.dice}>
+      {props.type === "custom" && <p className={classes.dice_custom_text}>{props.customText}</p>}
       <img src={number} alt="dice" />
     </div>
   );
