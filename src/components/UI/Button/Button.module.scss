@@ -21,3 +21,12 @@
     border: 1px solid white;
   }
 }
+
+.disabled{
+  background-color: get-color(tertiary);
+  border: 1px solid gray;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-sizing: border-box;
+  text-decoration:none;
+}

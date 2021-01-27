@@ -9,7 +9,9 @@ import Spinner from "./components/UI/Spinner/Spinner";
 const SingleDice = React.lazy(() => import("./containers/SignleDice"));
 const CustomDice = React.lazy(() => import("./containers/CustomDice"));
 const MultipleDice = React.lazy(() => import("./containers/MultipleDice"));
-const UserChoice = React.lazy(() => import("./components/UserChoice/UserChoice"));
+const UserChoice = React.lazy(() =>
+  import("./components/UserChoice/UserChoice")
+);
 
 function App(props) {
   return (
@@ -19,11 +21,7 @@ function App(props) {
           <Route
             path="/single-dice"
             render={() => (
-              <Suspense
-                fallback={
-                  <Spinner />
-                }
-              >
+              <Suspense fallback={<Spinner />}>
                 <SingleDice />
               </Suspense>
             )}
@@ -31,11 +29,7 @@ function App(props) {
           <Route
             path="/custom-dice"
             render={() => (
-              <Suspense
-                fallback={
-                  <Spinner />
-                }
-              >
+              <Suspense fallback={<Spinner />}>
                 <CustomDice />
               </Suspense>
             )}
@@ -43,23 +37,16 @@ function App(props) {
           <Route
             path="/multiple-dice"
             render={() => (
-              <Suspense
-                fallback={
-                  <Spinner/>
-                }
-              >
+              <Suspense fallback={<Spinner />}>
                 <MultipleDice />
               </Suspense>
             )}
           />
           <Route
-            path="/" exact
+            path="/"
+            exact
             render={() => (
-              <Suspense
-                fallback={
-                  <Spinner />
-                }
-              >
+              <Suspense fallback={<Spinner />}>
                 <UserChoice />
               </Suspense>
             )}

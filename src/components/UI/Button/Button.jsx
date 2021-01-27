@@ -5,9 +5,13 @@ import { faDiceD6, faCalculator } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Button.module.scss";
 
 const Button = (props) => {
+  let style = [classes.btn];
+  if (props.disabled) {
+    style.push(classes.disabled);
+  }
   return (
     <div>
-      <button className={classes.btn} onClick={props.clicked}>
+      <button className={style.join(" ")} onClick={props.clicked}>
         <FontAwesomeIcon
           size="2x"
           icon={props.iconType === "roll" ? faDiceD6 : faCalculator}

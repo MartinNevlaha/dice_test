@@ -8,14 +8,14 @@ const Dice = (props) => {
   const [number, setNumber] = useState(null);
 
   
-  const clickHandler = () => {
+  const rollDiceHandler = () => {
     setNumber(generateNumber());
   };
 
   return (
     <React.Fragment>
       <DiceElement thrownNumber={number} />
-      <Button iconType="roll" clicked={clickHandler}>
+      <Button iconType="roll" clicked={rollDiceHandler}>
         Roll dice
       </Button>
     </React.Fragment>
