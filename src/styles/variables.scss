@@ -1,9 +1,9 @@
 $colors: (
   primary: black,
-  secondary: #007dd9,
-  tertiary: #e8e9ef,
+  secondary: #007DD9,
+  tertiary: #E8E9EF,
 );
 
 @function get-color($color) {
-  @return map-get($colors, $color);
+  @return map-get($colors, $color )
 }
