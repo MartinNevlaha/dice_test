@@ -1,15 +1,22 @@
-import React from 'react';
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDice } from "@fortawesome/free-solid-svg-icons";
+import { faDiceD6, faCalculator } from "@fortawesome/free-solid-svg-icons";
 
-import "./Button.module.scss";
+import classes from "./Button.module.scss";
 
-const Button = props => {
+const Button = (props) => {
   return (
-    <button className={classes.btn}>
-
-    </button>
-  )
-}
+    <div>
+      <button className={classes.btn} onClick={props.clicked}>
+        <FontAwesomeIcon
+          size="2x"
+          icon={props.iconType === "roll" ? faDiceD6 : faCalculator}
+          className={classes.btn_icon}
+        />
+        {props.children}
+      </button>
+    </div>
+  );
+};
 
 export default Button;

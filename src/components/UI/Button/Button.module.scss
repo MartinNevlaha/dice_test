@@ -1,3 +1,23 @@
+@import "../../../styles/imports.scss";
+
 .btn {
+  margin: 0 auto;
+  padding: .2rem 1.5rem;
+  text-align: center;
+  background-color: get-color(secondary);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  @include flexbox(center, center);
+  font-size: get-font-size(small);
+  transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   
+  &_icon {
+    padding-right: .5rem;
+  }
+  &:hover, &:active {
+    cursor: pointer;
+    background-color: get-color(secondary-m);
+    border: 1px solid white;
+  }
 }
